@@ -53,7 +53,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["node-sass", "npm:4.14.1"],
             ["register-service-worker", "npm:1.7.2"],
             ["sass-loader", "virtual:1a4c5ce71124427696f6ee01d3cc983091f6f35686010c35b6a4b56fa2a2507316546e7822d052dc88c4b3b338393357b3192d502fc9866bf9f633e82ea5b445#npm:8.0.2"],
-            ["vue", "npm:3.2.7"]
+            ["vue", "npm:3.2.7"],
+            ["vue-eslint-parser", "virtual:1a4c5ce71124427696f6ee01d3cc983091f6f35686010c35b6a4b56fa2a2507316546e7822d052dc88c4b3b338393357b3192d502fc9866bf9f633e82ea5b445#npm:7.10.0"]
           ],
           "linkType": "SOFT",
         }]
@@ -7396,7 +7397,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-utils", "npm:2.1.0"],
             ["natural-compare", "npm:1.4.0"],
             ["semver", "npm:6.3.0"],
-            ["vue-eslint-parser", "virtual:5f0557e39a73a8fd580a8f30ccc12a870cb73b5c7ce1f81661f2ff93d22e0c0296196d850b8c1dfcceaead3bb9f7b4b6c5c327c87e2cf4ba4c6d2edcf6c08fdb#npm:7.10.0"]
+            ["vue-eslint-parser", "virtual:1a4c5ce71124427696f6ee01d3cc983091f6f35686010c35b6a4b56fa2a2507316546e7822d052dc88c4b3b338393357b3192d502fc9866bf9f633e82ea5b445#npm:7.10.0"]
           ],
           "packagePeers": [
             "@types/eslint",
@@ -8121,7 +8122,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["node-sass", "npm:4.14.1"],
             ["register-service-worker", "npm:1.7.2"],
             ["sass-loader", "virtual:1a4c5ce71124427696f6ee01d3cc983091f6f35686010c35b6a4b56fa2a2507316546e7822d052dc88c4b3b338393357b3192d502fc9866bf9f633e82ea5b445#npm:8.0.2"],
-            ["vue", "npm:3.2.7"]
+            ["vue", "npm:3.2.7"],
+            ["vue-eslint-parser", "virtual:1a4c5ce71124427696f6ee01d3cc983091f6f35686010c35b6a4b56fa2a2507316546e7822d052dc88c4b3b338393357b3192d502fc9866bf9f633e82ea5b445#npm:7.10.0"]
           ],
           "linkType": "SOFT",
         }]
@@ -15211,10 +15213,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:5f0557e39a73a8fd580a8f30ccc12a870cb73b5c7ce1f81661f2ff93d22e0c0296196d850b8c1dfcceaead3bb9f7b4b6c5c327c87e2cf4ba4c6d2edcf6c08fdb#npm:7.10.0", {
-          "packageLocation": "./.yarn/__virtual__/vue-eslint-parser-virtual-4df409c392/0/cache/vue-eslint-parser-npm-7.10.0-bedc8e097e-41866f7951.zip/node_modules/vue-eslint-parser/",
+        ["virtual:1a4c5ce71124427696f6ee01d3cc983091f6f35686010c35b6a4b56fa2a2507316546e7822d052dc88c4b3b338393357b3192d502fc9866bf9f633e82ea5b445#npm:7.10.0", {
+          "packageLocation": "./.yarn/__virtual__/vue-eslint-parser-virtual-8a7c74bf93/0/cache/vue-eslint-parser-npm-7.10.0-bedc8e097e-41866f7951.zip/node_modules/vue-eslint-parser/",
           "packageDependencies": [
-            ["vue-eslint-parser", "virtual:5f0557e39a73a8fd580a8f30ccc12a870cb73b5c7ce1f81661f2ff93d22e0c0296196d850b8c1dfcceaead3bb9f7b4b6c5c327c87e2cf4ba4c6d2edcf6c08fdb#npm:7.10.0"],
+            ["vue-eslint-parser", "virtual:1a4c5ce71124427696f6ee01d3cc983091f6f35686010c35b6a4b56fa2a2507316546e7822d052dc88c4b3b338393357b3192d502fc9866bf9f633e82ea5b445#npm:7.10.0"],
             ["@types/eslint", null],
             ["debug", "virtual:c9bc8b4682dae1ac36fcb97c7fccfb86af01a1f6fc48eaf83d9bd00fb14f9e1f641a2409ef7e079b4e0ed4a16267412a60166cc456172f4a4f9469cc6ef7c07b#npm:4.3.2"],
             ["eslint", "npm:7.32.0"],
