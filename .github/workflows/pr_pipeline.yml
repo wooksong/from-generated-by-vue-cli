@@ -1,0 +1,39 @@
+name: A pull-request pipeline
+
+on:
+  pull_request_target:
+
+jobs:
+  lint:
+    name: Running vue-cli-serve lint via yarn
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: 'refs/pull/${{ github.event.number }}/merge'
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14'
+      - run: npm install -g yarn
+      - run: yarn set version berry
+      - name: Run linter with the --no-fix option
+        run: yarn lint --no-fix
+
+  build:
+    name: Build
+    needs: lint
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out the target commit (${{ github.sha }})
+      uses: actions/checkout@v2
+      with:
+        ref: 'refs/pull/${{ github.event.number }}/merge'
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+          node-version: '14'
+    - run: npm install -g yarn
+    - run: yarn set version berry
+    - name: Build packages
+      run: yarn build
