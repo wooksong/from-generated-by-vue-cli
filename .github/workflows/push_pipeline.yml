@@ -1,0 +1,34 @@
+name: An on-push pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build_and_deploy:
+    name: Build and Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out the target commit (${{ github.sha }})
+      uses: actions/checkout@v2
+      with:
+        ref: 'main'
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+          node-version: '14'
+    - name: Inject slug/short variables
+      uses: rlespinasse/github-slug-action@v3.x
+    - run: npm install -g yarn
+    - run: yarn set version berry
+    - run: yarn install
+    - name: Build packages
+      run: yarn build
+      env:
+        GITHUB_REPOSITORY_NAME_PART: ${{ env.GITHUB_REPOSITORY_NAME_PART }}
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        publish_dir: ./dist
